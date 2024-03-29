@@ -6,5 +6,6 @@ import { Effect } from "npm:effect";
  */
 const toTen = Effect.as(10)(Effect.succeed(20));
 const prog = Effect.runSync(toTen);
-
-assertEquals(prog, 10);
+Deno.test("Effect.as", () => {
+  assertEquals(prog, 10);
+});

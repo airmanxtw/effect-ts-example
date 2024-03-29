@@ -6,5 +6,6 @@ import { Effect } from "npm:effect";
  */
 const notTrue = Effect.negate(Effect.succeed(true));
 const result = Effect.runSync(notTrue);
-
-assertEquals(result, false);
+Deno.test("Effect.negate", () => {
+  assertEquals(result, false);
+});
