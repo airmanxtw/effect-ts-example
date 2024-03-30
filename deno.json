@@ -1,5 +1,8 @@
 {
   "tasks": {
     "test": "deno test"
+  },
+  "imports": {
+    "assert": "https://deno.land/std@0.220.0/assert/mod.ts"
   }
 }
