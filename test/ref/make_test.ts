@@ -1,13 +1,20 @@
 import { assertEquals } from "assert";
 import { Effect, Ref, pipe } from "npm:effect";
-import { flatMap, pipeThroughChannelOrFail } from "npm:effect/Stream";
-import { fromEffectTagged } from "npm:effect/RequestResolver";
 
-const age = Ref.make(18);
-const prog = pipe(age, Effect.flatMap(Ref.updateAndGet<number>((n) => n + 1)));
+const useAge = (age: Ref.Ref<number>) => {
+  //const add = pipe(age, Effect.flatMap(Ref.updateAndGet<number>((n) => n + 1)));
+  const add = Ref.update(age, (n) => n + 1);
+  const get = Ref.get(age);
+  return { add, get };
+};
 
+const prog = pipe(
+  Ref.make(18),
+  Effect.map(useAge),
+  Effect.map(({ add, get }) => Effect.runSync(add))
+);
 const result = Effect.runSync(prog);
 
 Deno.test("Ref.make", () => {
-  assertEquals(result, 19);
+  assertEquals(result, 20);
 });
