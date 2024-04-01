@@ -10,7 +10,7 @@ const test = Effect.match(Effect.all([fun1, fun2(-3)]), {
   onFailure: (_) => "error",
 });
 
-const test2 = Effect.all([fun1, fun3]);
+const test2 = Effect.all([fun1, fun2(3)]);
 
 const prog = Effect.runSync(test);
 
