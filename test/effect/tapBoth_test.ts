@@ -14,6 +14,6 @@ const prog = pipe(
 
 const result = Effect.runSync(prog);
 
-Deno.test("Effect.tap", () => {
+Deno.test("Effect.tapBoth", () => {
   assertEquals(result, 11);
 });
