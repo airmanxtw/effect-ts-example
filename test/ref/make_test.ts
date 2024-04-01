@@ -11,10 +11,10 @@ const useAge = (age: Ref.Ref<number>) => {
 const prog = pipe(
   Ref.make(18),
   Effect.map(useAge),
-  Effect.map(({ add, get }) => Effect.runSync(add))
+  Effect.flatMap(({ add, get }) => add.pipe(() => get))
 );
 const result = Effect.runSync(prog);
 
 Deno.test("Ref.make", () => {
-  assertEquals(result, 20);
+  assertEquals(result, 19);
 });
