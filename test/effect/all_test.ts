@@ -2,10 +2,10 @@ import { assertEquals } from "assert";
 import { Effect } from "npm:effect";
 
 const fun1 = Effect.succeed(1);
-const fun2 = Effect.fail("error");
+const fun2 = (n: number): Effect.Effect<number, string> => (n > 0 ? Effect.succeed(n) : Effect.fail("error"));
 const fun3 = Effect.succeed(3);
 
-const test = Effect.match(Effect.all([fun1, fun2]), {
+const test = Effect.match(Effect.all([fun1, fun2(-3)]), {
   onSuccess: (x) => x,
   onFailure: (_) => "error",
 });
