@@ -16,6 +16,16 @@ Deno.test("Ref.make", () => {
 });
 
 Deno.test("Ref.make 2", () => {
+  const age = Ref.make(18);
+
+  const prog = age.pipe(Effect.flatMap(Ref.update((n) => n + 1)));
+
+  const result = Effect.runSync(prog);
+
+  assertEquals(result, 20);
+});
+
+Deno.test("Ref.make 3", () => {
   const age = Effect.succeed(18);
   const prog = pipe(
     age,
@@ -24,6 +34,19 @@ Deno.test("Ref.make 2", () => {
   );
 
   const result = Effect.runSync(prog);
+
+  assertEquals(result, 20);
+});
+
+Deno.test("Ref.make 4", () => {
+  const age = 18;
+  const prog = pipe(
+    age,
+    (a) => a + 1,
+    (a) => a + 1
+  );
+
+  const result = prog;
 
   assertEquals(result, 20);
 });
