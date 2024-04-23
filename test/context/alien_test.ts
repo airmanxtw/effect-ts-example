@@ -14,7 +14,7 @@ const prog = Alien.pipe(
   Effect.flatMap(([hello, walk]) => Effect.succeed(`${hello},${walk}`))
 );
 
-const earth = {
+const Earth = {
   hello() {
     return Effect.succeed("我是地球人");
   },
@@ -23,7 +23,7 @@ const earth = {
   },
 };
 
-const mars = {
+const Mars = {
   hello() {
     return Effect.succeed("我是火星人");
   },
@@ -32,8 +32,8 @@ const mars = {
   },
 };
 
-const runProgEarth = Effect.provideService(prog, Alien, earth);
-const runProgMars = Effect.provideService(prog, Alien, mars);
+const runProgEarth = Effect.provideService(prog, Alien, Earth);
+const runProgMars = Effect.provideService(prog, Alien, Mars);
 
 const resultEarth = Effect.runSync(runProgEarth);
 const resultMars = Effect.runSync(runProgMars);
