@@ -6,6 +6,7 @@ class Pi extends Context.Tag("Pi")<
   {
     readonly value: Effect.Effect<number>;
     readonly version: Effect.Effect<string>;
+    add(a: number, b: number): number;
   }
 >() {}
 
@@ -18,6 +19,7 @@ const prog = (r: number) =>
 const progrunable = Effect.provideService(prog(10), Pi, {
   value: Effect.succeed(3.14),
   version: Effect.succeed("v1"),
+  add: (a, b) => a + b,
 });
 
 const result = Effect.runSync(progrunable);
