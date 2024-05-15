@@ -1,5 +1,5 @@
 import { assertEquals } from "assert";
-import { never } from "npm:effect/Fiber";
+
 import { Effect } from "npm:effect";
 
 const add = (x: number, y: number): Effect.Effect<number, string> =>
