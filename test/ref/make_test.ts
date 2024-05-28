@@ -50,3 +50,14 @@ Deno.test("Ref.make 4", () => {
 
   assertEquals(result, 20);
 });
+
+Deno.test("Ref.make 5", () => {
+  const age = Ref.make(18);
+
+  const prog = age.pipe(Effect.flatMap(Ref.updateAndGet((a) => a + 1)));
+
+ 
+  const result = Effect.runSync(prog);
+
+  assertEquals(result, 19);
+});
