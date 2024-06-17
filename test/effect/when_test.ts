@@ -1,5 +1,6 @@
-import { Effect, Exit, Option } from "npm:effect";
+import { Effect,  Option } from "npm:effect";
 import { assertEquals } from "assert";
+
 const result = (n: number) => Effect.succeed(n).pipe(Effect.when(() => n > 10));
 
 const prog = Effect.runSync(result(15));

@@ -2,6 +2,8 @@ import { assertEquals } from "assert";
 import { Effect, Ref, pipe } from "npm:effect";
 import { aggregate } from "npm:effect/Stream";
 
+
+// !  uncompleted
 Deno.test("Effect.repeatN", () => {
   const counter = 
 
