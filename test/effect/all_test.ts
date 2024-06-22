@@ -1,5 +1,5 @@
 import { assertEquals } from "assert";
-import { Effect } from "npm:effect";
+import { Effect } from "npm:effect@3.4.0";
 
 const fun1 = Effect.succeed(1);
 const fun2 = (n: number): Effect.Effect<number, string> => (n > 0 ? Effect.succeed(n) : Effect.fail("error"));
