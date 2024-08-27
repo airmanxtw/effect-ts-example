@@ -1,10 +1,11 @@
 import { assertEquals } from "assert";
-import { Effect, ReadonlyArray } from "npm:effect";
+import { Effect, Iterable } from "npm:effect";
+
 
 const fun1 = (a: number): Effect.Effect<number, string> =>
   a > 10 ? Effect.fail("a is greater than 10") : Effect.succeed(a);
 
-const prog = Effect.partition(ReadonlyArray.range(1, 20), fun1);
+const prog = Effect.partition(Iterable.range(1, 20), fun1);
 
 const [_, success] = Effect.runSync(prog);
 

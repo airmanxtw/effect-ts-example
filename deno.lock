@@ -2,68 +2,11 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "npm:@effect/platform": "npm:@effect/platform@0.58.2_@effect+schema@0.68.5__effect@3.4.0_effect@3.4.0",
-      "npm:effect": "npm:effect@2.4.4",
-      "npm:effect@3.4.0": "npm:effect@3.4.0"
+      "npm:effect": "npm:effect@3.6.6"
     },
     "npm": {
-      "@effect/platform@0.58.2_@effect+schema@0.68.5__effect@3.4.0_effect@3.4.0": {
-        "integrity": "sha512-Z+ClK2QcfvbefUhhnhUVse3ZZfTgBjTgNm5Q8FAr1PFpS+SSCcNSMeXs6R2uzBHbm1cQgRmLrisDVuPeSTP5fw==",
-        "dependencies": {
-          "@effect/schema": "@effect/schema@0.68.5_effect@3.4.0",
-          "effect": "effect@3.4.0",
-          "find-my-way-ts": "find-my-way-ts@0.1.4",
-          "multipasta": "multipasta@0.2.2",
-          "path-browserify": "path-browserify@1.0.1"
-        }
-      },
-      "@effect/schema@0.68.5_effect@3.4.0": {
-        "integrity": "sha512-oi42ZVFEsPsCdmBCyM2+MG+SMcB2uG5xyYFMseMCLiw2C5l2kEp7/8pCN1J69391a9magb3KlnlSGxbmgbvkAw==",
-        "dependencies": {
-          "effect": "effect@3.4.0",
-          "fast-check": "fast-check@3.19.0"
-        }
-      },
-      "effect@2.4.4": {
-        "integrity": "sha512-4FeWS2/9sVr5yclVNNTlj8Q1tdertKeeQEClryzC/X1urHex/Ij7b1pScJVClUx3ZrwnvtYWVOqMPYJZ0y977A==",
-        "dependencies": {}
-      },
-      "effect@3.4.0": {
-        "integrity": "sha512-dBufbmIyeOi8Wog8kJUrpCIvVs/GcGMimtd6JIXhRIKdRLrVho9og/28sJmKjxHM+PG9Bn3t9XehcM3YfCB8og==",
-        "dependencies": {}
-      },
-      "fast-check@3.19.0": {
-        "integrity": "sha512-CO2JX/8/PT9bDGO1iXa5h5ey1skaKI1dvecERyhH4pp3PGjwd3KIjMAXEg79Ps9nclsdt4oPbfqiAnLU0EwrAQ==",
-        "dependencies": {
-          "pure-rand": "pure-rand@6.1.0"
-        }
-      },
-      "fast-decode-uri-component@1.0.1": {
-        "integrity": "sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==",
-        "dependencies": {}
-      },
-      "fast-querystring@1.1.2": {
-        "integrity": "sha512-g6KuKWmFXc0fID8WWH0jit4g0AGBoJhCkJMb1RmbsSEUNvQ+ZC8D6CUZ+GtF8nMzSPXnhiePyyqqipzNNEnHjg==",
-        "dependencies": {
-          "fast-decode-uri-component": "fast-decode-uri-component@1.0.1"
-        }
-      },
-      "find-my-way-ts@0.1.4": {
-        "integrity": "sha512-naNl2YZ8m9LlYtPZathQBjXQQ8069uYBFq8We6w9AEGddJErVh0JZw8jd/C/2W9Ib3BjTnu+YN0/rR+ytWxNdw==",
-        "dependencies": {
-          "fast-querystring": "fast-querystring@1.1.2"
-        }
-      },
-      "multipasta@0.2.2": {
-        "integrity": "sha512-KKGdmXIJUmt9BV45LsbUdMnju8eCNSyF9KpbyqK2E3wQXjpPQOg52/Hc+nsmBacmEkNxLVT5h1y3ZgEXB4prXg==",
-        "dependencies": {}
-      },
-      "path-browserify@1.0.1": {
-        "integrity": "sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==",
-        "dependencies": {}
-      },
-      "pure-rand@6.1.0": {
-        "integrity": "sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==",
+      "effect@3.6.6": {
+        "integrity": "sha512-j5wG72rPfoFdZluHc4M6/Zx0KvcZFd0Ky2wQ6xnW4eWlRDGbnRc13S/BSC+gIKG4kJGYYFLFiigG/2V8Ak+BAw==",
         "dependencies": {}
       }
     }
